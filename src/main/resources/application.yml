@@ -1,0 +1,24 @@
+server:
+  port: 7100
+
+spring:
+  application:
+    name: chatbot-config
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://ip:3306/nskins
+    username: username
+    password: password
+  jpa:
+    hibernate:
+      ddl-auto: 
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8100/eureka/
+  instance:
+    prefer-ip-address: true
+
