@@ -1,5 +1,9 @@
  <h1 class="curproject-name"> API 规定 </h1> 
 
+> 提示：用Typora看格式比较好...
+>
+> 数据格式只看「名称」，「类型」，「备注」即可，「是否必须」不用管
+
 [TOC]
 
 # group 和 service 的对应关系
