@@ -59,7 +59,7 @@ public class BotGroupController {
      * @param botName
      * @return
      */
-    @RequestMapping(value = "{botName}", method = RequestMethod.GET)
+    @RequestMapping(value = "/{botName}", method = RequestMethod.GET)
     public Result findGroupsByBotName(@PathVariable String botName) {
         List<String> groupIds = botGroupService.findGroupsByBotName(botName);
         return new Result(StatusCode.OK, "查找成功", groupIds);
