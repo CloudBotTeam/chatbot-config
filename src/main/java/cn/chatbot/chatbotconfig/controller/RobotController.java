@@ -26,9 +26,9 @@ public class RobotController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
-    public Result findAll() {
+    public List<Robot> findAll() {
         List<Robot> robots = robotService.findAll();
-        return new Result(StatusCode.OK, "查找成功", robots);
+        return robots;
     }
 
     /**

@@ -57,10 +57,10 @@ public class GroupServiceController {
      * @param groupId
      * @return
      */
-    @RequestMapping(value = "/{groupId}", method = RequestMethod.GET)
-    private Result findServicesByGroupId(@PathVariable String groupId) {
+    @RequestMapping(value = "/{groupId}/service", method = RequestMethod.GET)
+    private List<String> findServicesByGroupId(@PathVariable String groupId) {
         List<String> serviceIds = groupServiceService.findServicesByGroupId(groupId);
-        return new Result(StatusCode.OK, "查找成功", serviceIds);
+        return serviceIds;
     }
 
 }

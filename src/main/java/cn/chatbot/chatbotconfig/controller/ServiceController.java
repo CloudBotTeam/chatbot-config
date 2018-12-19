@@ -26,9 +26,9 @@ public class ServiceController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
-    public Result findAll() {
+    public List<Service> findAll() {
         List<Service> services = serviceService.findAll();
-        return new Result(StatusCode.OK, "查找成功", services);
+        return services;
     }
 
     /**

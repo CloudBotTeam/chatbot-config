@@ -26,9 +26,9 @@ public class GroupController {
      * @return
      */
     @RequestMapping(method = RequestMethod.GET)
-    public Result findAll() {
+    public List<Group> findAll() {
         List<Group> groups = groupService.findAll();
-        return new Result(StatusCode.OK, "查找成功", groups);
+        return groups;
     }
 
     /**
